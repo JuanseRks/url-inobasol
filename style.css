@@ -1,0 +1,307 @@
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-fluid {
+
+  animation: aparecer_lateral 0.2s ease-in;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.hero {
+  background-color: #f5f6f7;
+  min-height: 450px;
+  text-align: center;
+}
+
+.hero-principal {
+  color: green;
+  padding: 3rem;
+  animation: aparecer_objeto 1s ease-in;
+}
+
+.titulo-inobasol {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.hero-principal h2 {
+  color: #615151;
+}
+
+/* @keyframes (crea animaciones y/o modelados) */
+
+@keyframes aparecer_texto {
+  from { opacity: 0; }
+  to { opacity: 1; }
+  }
+@keyframes aparecer_objeto {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+  }
+@keyframes aparecer_lateral {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+  }
+@keyframes fondo_alterno {
+  0% { background-image: url(images/sede1.png);}
+  33% { background-image: url(images/aniversario74.webp);}
+  66% { background-image: url(images/image2.jpeg);}
+  100% { background-image: url(images/sede1.png);}
+}
+/* @media (REMPLAZA UNOS PARAMETROS SEGUN EL TAMAÑO LOGICO CSS DE UNA PANTALLA) */
+
+@media screen and (max-width: 480px) {
+  .overlay p {
+    font-size: 18px; }
+  .overlay i {
+    font-size: 40px; }
+  .text1 {
+    font-size: 1rem;}
+  .carousel-item img,
+  .carousel-caption {
+    display: none;
+  }
+  .carousel-inner {
+    animation: fondo_alterno 12s infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero-inferior-imagen {
+    object-fit: cover;
+    max-width: 600px;
+    border-radius: 50%;
+
+  }
+}
+
+.seccion-oscura {
+  color: white;
+  background-color: green;
+}
+
+.seccion-clara {
+  color: black;
+  background-color: white;
+}
+
+.sobre-mi {
+  height: 250px;
+  padding: 10px;
+  animation: aparecer_objeto 1s ease-in;
+}
+
+.sobre-mi .contenedor {
+  max-width: 1000px;
+  text-align: center;
+  animation: aparecer_objeto 1s ease-in;
+}
+
+.seccion-titulo {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: 'Rubik Dirt', cursive;
+}
+
+.seccion-descripcion {
+  font-size: 1.2rem;
+  color: #584e4e;
+}
+
+.seccion-texto {
+  font-size: 1.2rem;
+}
+
+.btn-info {
+  font-size: 1.1rem;
+  margin: 20px;
+}
+
+.texto-negro {
+  color: black;
+}
+
+.texto-blanco {
+  color: white;
+}
+
+.experiencia {
+  padding: 40px 40px 40px 40px;
+}
+
+.experiencia-titulo {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.experiencia i {
+  font-size: 2.5rem;
+  color: #7ade30;
+  background-color: green;
+  padding: 8px 19px;
+  border-radius: 50%;
+}
+
+.experiencia .columna {
+  padding: 20px;
+  border: 2px solid #8080804d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.2s ease-in;
+}
+
+.experiencia .columna:hover {
+  color: white;
+  background-color: #008000;
+}
+
+.badges-contenedor {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.badge {
+  margin: 5px;
+}
+
+.proyectos-recientes {
+    padding: 40px;
+}
+
+.proyectos-recientes img {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.proyectos-contenedor {
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+.overlay {
+  transition: all 0.2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.proyecto {
+  position: relative;
+}
+
+.proyecto:hover img {
+  opacity: 0.2;
+}
+
+.proyecto:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .iconos-contenedor {
+  display: flex;
+}
+
+.overlay i {
+  color: black;
+  font-size: 60px;
+  margin: 10px;
+}
+
+.articulos {
+  min-height: 500px;
+  padding: 30px;
+}
+
+.articulos .card {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px;
+}
+
+.articulos .card-header {
+  font-weight: bold;
+}
+
+/* Testimonios */
+
+.testimonios {
+  text-align: center
+}
+
+.carousel {
+  padding: 40px 40px 80px 40px;
+  background-color: #008000;
+  
+}
+
+.carousel-item {
+  height: 500px;
+  color: white;
+  text-align: center;
+}
+.carrusel1 {
+  height: 380px;
+  width: 700px;
+  
+  
+}
+.carrusel2 {
+  height: 380px;
+  width: 350px;
+  
+  
+}
+.pie-de-pagina {
+  background-color: #f5f6f7;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #615151;
+  margin: 2px;
+}
+.cuadro-jornada {
+  border: 2px solid #008000;
+  border-radius: 10px;
+  padding: auto;
+  margin: 15px;
+  max-width: 2000px;
+  text-align: justify;
+}
+
