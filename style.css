@@ -288,6 +288,11 @@ h1 {
   
   
 }
+.carrusel3{
+  height: 380px;
+  width: 350px;
+
+}
 .pie-de-pagina {
   background-color: #f5f6f7;
   text-align: center;
@@ -304,4 +309,8 @@ h1 {
   max-width: 2000px;
   text-align: justify;
 }
+.escudo-inobasol {
+  border-radius: 85px;
+}
+
 
